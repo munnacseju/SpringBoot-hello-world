@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Page</title>
+
+    <style>
+        .center{
+            margin: auto;
+            width: 85%;
+            background-color: #665757;
+            padding: 1px 0px;
+
+        }
+        .welcome{
+            background-color: #0339f6;
+            font-size: 80px;
+            padding: 10px 0px;
+            color: white;
+            width: 100%;
+        }
+        .form{
+            padding: 10px 0px;
+            color: white;
+            background-color: #000d35;
+            width: 100%;
+        }
+
+        .form label{
+            font-size: 35px;
+            height: 100%;
+        }
+        .form input{
+            font-size: 35px;
+            height: 100%;
+            border: solid #0339f6 1px;
+
+        }
+
+        .btn{
+            font-size: 35px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<div align="center" class="center">
+    <div class="welcome"><p>Celsius to Fahrenheit Convert<p></div>
+    <div class="form">
+        <form action="#" th:action="@{/register}" th:object="${loader}" method="post">
+            <label>Celsius Value: </label>
+            <input required autofocus placeholder="Enter Celcius Value" type="number" step="any" th:field="*{cof}"  /> <br><br>
+    <button type="submit" class="btn">Convert</button>
+    </form>
+    </div>
+</div>
+
+</body>
+</html>
